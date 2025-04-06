@@ -1,16 +1,15 @@
-#proble: Dados os valores de horarios abaixo, decifre a logica e faça um codigo para executar.
+eh01 = int(input("Digite a hora da entrada: "))
+em01 = int(input("Digite o minuto: "))
+eh02 = int(input("Digite a hora da entrada: "))
+em02 = int(input("Digite o minuto: "))
 
-eh01 = int(input("digite hora da entrada: "))
-em01 = int(input("digite minuto: "))
-eh02 = int(input("digite hora da entrada: "))
-em02 = int(input("digite minuto: "))
+somah = eh01+eh02
+somam = em01+em02
 
-somahora = eh01+eh02
-somamin = em01+em02
+if somam >= 60:
+        somah += somam // 60
+        somam = somam % 60
 
-if somamin>=60:
-    min = somamin-60
-if somahora>=12:
-    hora = somahora-12
+somah = somah % 24
 
-print (f"{hora+1}:{min}")
+print (f"Saida as {somah:02d}:{somam:02d}")
